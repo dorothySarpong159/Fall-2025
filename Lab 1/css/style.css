@@ -1,0 +1,23 @@
+/* position */
+
+h2 { /* selector */
+
+}
+
+/*specificity*/
+.wrapper {
+    background-color: #000000;
+    color: #fff; /*declaration */
+}
+div {
+    background-color: #BADA55;
+    color: #000000;
+    /* property - font-size | value - 10px */
+    font-size: 10px; /* value */
+}
+
+
+/* inheritance - not part of the cascade, but a related concept */
+body{
+    color:#d72638;
+}
