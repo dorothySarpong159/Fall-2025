@@ -1,0 +1,170 @@
+
+/* Define a custom color palette using CSS variables for a modern, geometric feel. */
+:root {
+    --primary: #747571;      
+    --secondary: #a9d6eb;    
+    --base: #0c0a0a;     
+    --text: #e0e0e0;        
+}
+
+
+body {
+    font-family: 'Bungee Spice', sans-serif;
+    color: var(--text);
+    background-color: var(--base);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    background-image: url(../img/image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+#css-zen-garden {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--base);
+    padding: 2rem;
+}
+
+
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 2rem;
+    font-family: 'Dancing Script';
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(63, 62, 62, 0.5);
+}
+
+
+
+
+/*
+ * ============================================================================
+ * 3. TYPOGRAPHY AND VISUALS
+ * ============================================================================
+ */
+
+h1, h2, h3 {
+    font-family: 'Bungee Spice', serif;
+    color: var(--secondary);
+    text-transform: uppercase;
+}
+
+h1 {
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 0px var(--secondary);
+    margin-bottom: 2rem;
+    color:crimson;
+    font-size: clamp(4rem, 6vw, 10rem); 
+    text-transform: uppercase;
+    font-family: 'Bungee Spice';
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    color: var(--base);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--base);
+}
+h2:hover{
+    color:aqua;
+}
+
+
+
+h3::before {
+    content: "▪ ";
+    color: var(--secondary);
+
+}
+
+h3 p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Imperial Script', Dancing Script;
+}
+
+a:hover {
+    color: #BADA55;
+}
+
+
+.explanation > p {
+    font-style: italic;
+    background-color: rgba(117, 145, 18, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    font-size:1rem;
+    font-family: 'Dancing Script',sans-serif;
+    line-height: 1.5;
+    
+}
+
+.explanation:hover{
+    color:#e60c0c;
+}
+
+h2 + p {
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+
+h2 ~ p {
+    padding-left: 10px;
+    border-left: 3px solid var(--primary);
+}
+
+a[title] {
+    border-bottom: 1px dotted var(--secondary);
+    padding-bottom: 2px;
+}
+
+.design-selection,
+.design-archives, 
+.zen-resources{
+padding: 0.5rem;
+ border-radius: 5px;
+ background-color: rgba(3, 48, 56, 0.2);
+
+}
+
+.design-selection :hover{
+    color:#BADA55;
+}
+
+
+
+
+
+footer {
+    font-family: 'Roboto Slab', serif;
+    background-color: var(--primary);
+    color: #555151;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a {
+    color: var(--secondary);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #BADA55; 
+}
