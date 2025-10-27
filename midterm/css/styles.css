@@ -1,0 +1,197 @@
+/* Q2 Solution — Web Fonts + Fluid Typography + Dashboard Layout 
+
+Tasks: 
+
+1.) Define & apply colours using CSS variables and var() 
+2.) Load and apply a custom font
+3.) Create layout navigation with Flexbox & create a sticky navbar 
+4.) Create a flexible, fluid grid layout for cards without media queries 
+5.) Ensure CSS is efficient, well-formatted and valid */
+
+
+
+:root {
+    --space-1: .5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --radius: .75rem;
+
+    /* 1) Define & apply colours using CSS variables and var() */
+    --color-primary: #007bff; 
+    --color-secondary: #6c757d; 
+    --color-text: #0a0a0a; 
+    --color-text-muted: #6c757d;
+    --color-text-light: #ffffff; 
+    --color-background: #f8f9fa; 
+    --color-card-bg: #ffffff; 
+    --color-border: #dee2e6; 
+}
+   
+/* 2) Base */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-size: 1rem;
+}
+
+h1, h2 {
+    line-height: 1.2;
+    margin-top: 0;
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary); 
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius);
+}
+
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2) var(--space-3);
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-card-bg);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .05);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1rem; 
+    color: var(--color-primary);
+}
+
+.site-nav {
+    display: flex; 
+    gap: var(--space-1);
+    margin-right: auto; 
+    margin-left: var(--space-3);
+}
+
+.nav-link {
+    padding: .25rem .5rem;
+    border-radius: .375rem;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    background-color: var(--color-border);
+    text-decoration: none;
+}
+
+.cta-btn {
+    padding: .5rem .75rem;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:focus-visible {
+    background: #0056b3; 
+    outline: none;
+    outline-offset: 0;
+}
+
+/* 4) Hero */
+.hero {
+    padding: var(--space-3);
+    padding-bottom: var(--space-2);
+}
+
+.hero h1 {
+    font-size:1rem; 
+    font-weight: 800;
+}
+
+.hero .lead {
+    max-width: 68ch;
+    font-size: .95rem; 
+    color: var(--color-text-muted);
+}
+
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.content-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: var(--space-3);
+    padding: var(--space-3);
+}
+
+/* 6) Cards */
+.card {
+    border-radius: var(--radius);
+    padding: var(--space-2);
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+    transition: box-shadow .12s ease, transform .12s ease;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+}
+
+.card-title {
+    margin: .5rem 0 .25rem;
+    font-size: 1rem; 
+    font-weight: 800;
+}
+
+.card p {
+    font-size: 1rem; 
+    color: var(--color-text-muted);
+}
+
+/* Footer */
+.site-footer {
+    padding: var(--space-2) var(--space-3);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.site-footer small {
+    font-size: .75rem; 
+    padding: 5em;
+}
